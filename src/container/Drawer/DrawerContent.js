@@ -6,6 +6,13 @@ import { withNavigation } from 'react-navigation'
 
 class DrawerContent extends Component { 
 
+    constructor(props) {
+        super(props);
+        this.state = {
+            iconMenu: null
+        }
+    }
+
     _menu = () => {
         const menu = [
             {IconMenu: 'Dashboard', TextMenu: 'Dashboard'},
@@ -47,46 +54,7 @@ class DrawerContent extends Component {
                                 />
                                 <Text style ={{marginLeft: 10}}>Dashboard</Text>
                             </View>
-                            <View style = {{padding: 15, flexDirection: 'row'}} onPress = {() => this.props.navigation.navigate('Dashboard')}>
-                                <Icon 
-                                name = 'home' 
-                                size = {Icon.size || 20}
-                                color = 'black'
-                                />
-                                <Text style ={{marginLeft: 10}}>CheckIn</Text>
-                            </View>
-                            <View style = {{padding: 15, flexDirection: 'row'}} onPress = {() => this.props.navigation.navigate('Dashboard')}>
-                                <Icon 
-                                name = 'home' 
-                                size = {Icon.size || 20}
-                                color = 'black'
-                                />
-                                <Text style ={{marginLeft: 10}}>Leave</Text>
-                            </View>
-                            <View style = {{padding: 15, flexDirection: 'row'}} onPress = {() => this.props.navigation.navigate('Dashboard')}>
-                                <Icon 
-                                name = 'home' 
-                                size = {Icon.size || 20}
-                                color = 'black'
-                                />
-                                <Text style ={{marginLeft: 10}}>Assign Project</Text>
-                            </View>
-                            <View style = {{padding: 15, flexDirection: 'row'}} onPress = {() => this.props.navigation.navigate('Dashboard')}>
-                                <Icon 
-                                name = 'home' 
-                                size = {Icon.size || 20}
-                                color = 'black'
-                                />
-                                <Text style ={{marginLeft: 10}}>Setting</Text>
-                            </View>
-                            <View style = {{padding: 15, flexDirection: 'row'}} onPress = {() => this.props.navigation.navigate('Dashboard')}>
-                                <Icon 
-                                name = 'home' 
-                                size = {Icon.size || 20}
-                                color = 'black'
-                                />
-                                <Text style ={{marginLeft: 10}}>Log out</Text>
-                            </View>
+                        
                         </View>
                     </Grid> 
                 </Container>
